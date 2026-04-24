@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Human Firewall Championship — Rahmat Syawaludin</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="https://rahmatsyawaludin.github.io/portfolio/" class="nav-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to Portfolio
+    </a>
+    <div class="nav-links">
+      <a href="#investigation">Investigation</a>
+      <a href="#strategy">Strategy</a>
+      <a href="#build">The Build</a>
+      <a href="#roi">ROI</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="disclaimer-badge">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M7 6v4M7 4.5v.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        Hypothetical Project — Based on L&D Principles Learned
+      </div>
+      <div class="hero-meta">Case Study · Strategic L&D · Behavioral Design · Emerging Tech</div>
+      <h1 class="hero-title">The Human<br /><em>Firewall</em><br />Championship</h1>
+      <p class="hero-sub">A gamified cybersecurity training ecosystem that turned compliance fatigue into a competitive social habit — reducing phishing click rates from 25% to 4%.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">25% → 4%</span>
+          <span class="stat-label">Phishing Click Rate</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">300%</span>
+          <span class="stat-label">Reporting Increase</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">$1.2M</span>
+          <span class="stat-label">Risk Mitigation / yr</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">92%</span>
+          <span class="stat-label">Preferred Over Videos</span>
+        </div>
+      </div>
+      <div class="hero-author">Designed by <strong>Rahmat Syawaludin</strong></div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 10l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </header>
+
+  <!-- SECTION 1: INVESTIGATION (TNA) -->
+  <section class="section" id="investigation">
+    <div class="section-label">
+      <span class="section-num">01</span>
+      <span class="section-tag">Needs Analysis & Data-Driven Thinking</span>
+    </div>
+    <div class="section-content">
+      <h2 class="section-title">The <em>Investigation</em></h2>
+      <p class="section-intro">Despite 100% compliance on annual security videos, phishing incidents rose 15% in Q3. The data said one thing. The root cause said another.</p>
+
+      <div class="tna-grid">
+        <div class="tna-card trigger">
+          <div class="tna-icon">📈</div>
+          <h3>Business Trigger</h3>
+          <p>Phishing-related incidents increased by <strong>15% in Q3</strong>, creating potential financial and data risks — despite full compliance in mandatory annual security video training.</p>
+        </div>
+        <div class="tna-card stakeholder">
+          <div class="tna-icon">🤝</div>
+          <h3>Stakeholder Consultation</h3>
+          <p>Interviewed the <strong>CISO</strong> to define technical risks and <strong>HR</strong> to understand employee time constraints and workload pressures driving avoidance behaviours.</p>
+        </div>
+        <div class="tna-card root">
+          <div class="tna-icon">🔍</div>
+          <h3>Root Cause Found</h3>
+          <p>Using Design Thinking, the real culprit emerged: <strong>Compliance Fatigue.</strong> Employees knew the rules — but lacked the behavioural habit to apply them under high-pressure conditions.</p>
+        </div>
+      </div>
+
+      <!-- Fishbone Diagram -->
+      <div class="fishbone-container">
+        <h3 class="diagram-title">Why Analysis — Fishbone Diagram</h3>
+        <p class="diagram-sub">Click on each cause to explore the root factors behind the performance gap.</p>
+        <div class="fishbone" id="fishbone">
+          <div class="fishbone-spine"></div>
+          <div class="fishbone-head">
+            <div class="fishbone-problem">
+              Phishing<br/>Incidents<br/>↑ 15%
+            </div>
+          </div>
+          <div class="fishbone-bones">
+            <div class="bone bone-top" data-cause="Training Design" data-detail="Annual video format creates passive consumption. No repetition, no application, no recall under pressure. One-and-done compliance ≠ behavioural change.">
+              <div class="bone-line"></div>
+              <div class="bone-label">Training Design</div>
+              <div class="bone-detail">Click to explore</div>
+            </div>
+            <div class="bone bone-top" data-cause="Habit Formation" data-detail="Knowing a rule and habitually applying it are neurologically different. Without repeated practice in realistic conditions, employees default to speed over scrutiny.">
+              <div class="bone-line"></div>
+              <div class="bone-label">Habit Formation</div>
+              <div class="bone-detail">Click to explore</div>
+            </div>
+            <div class="bone bone-top" data-cause="Work Pressure" data-detail="High-stress, high-volume email environments prime employees for speed. Under cognitive load, pattern-matching shortcuts override critical evaluation.">
+              <div class="bone-line"></div>
+              <div class="bone-label">Work Pressure</div>
+              <div class="bone-detail">Click to explore</div>
+            </div>
+            <div class="bone bone-bottom" data-cause="No Feedback Loop" data-detail="Employees who nearly clicked a phishing link received no signal. Without immediate feedback, near-misses go unlearned. Consequences feel abstract until they aren't.">
+              <div class="bone-line"></div>
+              <div class="bone-label">No Feedback Loop</div>
+              <div class="bone-detail">Click to explore</div>
+            </div>
+            <div class="bone bone-bottom" data-cause="Low Motivation" data-detail="Security training is framed as a legal requirement, not a skill. No social incentive, no recognition, no sense of personal agency — compliance becomes a box-ticking exercise.">
+              <div class="bone-line"></div>
+              <div class="bone-label">Low Motivation</div>
+              <div class="bone-detail">Click to explore</div>
+            </div>
+            <div class="bone bone-bottom" data-cause="Measurement Gap" data-detail="Success was measured by completion rate, not behaviour change. 100% completion masked a 0% behaviour transfer. Wrong metric, wrong result.">
+              <div class="bone-line"></div>
+              <div class="bone-label">Measurement Gap</div>
+              <div class="bone-detail">Click to explore</div>
+            </div>
+          </div>
+        </div>
+        <div class="bone-info-panel" id="bonePanel">
+          <div class="bone-info-content">
+            <span class="bone-info-title" id="bonePanelTitle"></span>
+            <p id="bonePanelText"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: STRATEGY -->
+  <section class="section section-alt" id="strategy">
+    <div class="section-label">
+      <span class="section-num">02</span>
+      <span class="section-tag">Instructional Design & Curriculum Planning</span>
+    </div>
+    <div class="section-content">
+      <h2 class="section-title">The <em>Strategy</em></h2>
+      <p class="section-intro">Backward Design dictated the outcome first. SAM ensured the path was tested before it was scaled.</p>
+
+      <div class="strategy-grid">
+        <div class="strategy-card">
+          <div class="strategy-icon">🎯</div>
+          <h3>Backward Design</h3>
+          <p>Started with the desired end behaviour — <em>Proactive Reporting</em> — then worked backward to identify the knowledge, habits, and motivational triggers needed to produce it.</p>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-icon">🔄</div>
+          <h3>SAM Model</h3>
+          <p>A rapid prototype of the "Header Challenge" was developed and tested with a pilot group before company-wide launch. Iterative feedback shaped the final experience.</p>
+        </div>
+      </div>
+
+      <!-- 30-Day Roadmap -->
+      <div class="roadmap-container">
+        <h3 class="diagram-title">30-Day Learning Journey</h3>
+        <p class="diagram-sub">Click on each phase to view the scaffolded objectives and activities.</p>
+        <div class="roadmap">
+          <div class="roadmap-track"></div>
+          <div class="roadmap-phases">
+
+            <div class="phase active" data-phase="1">
+              <div class="phase-dot"></div>
+              <div class="phase-week">Week 1</div>
+              <div class="phase-title">Awareness</div>
+            </div>
+
+            <div class="phase" data-phase="2">
+              <div class="phase-dot"></div>
+              <div class="phase-week">Week 2</div>
+              <div class="phase-title">Practice</div>
+            </div>
+
+            <div class="phase" data-phase="3">
+              <div class="phase-dot"></div>
+              <div class="phase-week">Week 3</div>
+              <div class="phase-title">Competition</div>
+            </div>
+
+            <div class="phase" data-phase="4">
+              <div class="phase-dot"></div>
+              <div class="phase-week">Week 4</div>
+              <div class="phase-title">Habit Lock</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="phase-detail" id="phaseDetail">
+          <div class="phase-detail-content">
+            <div class="phase-detail-header">
+              <span class="phase-detail-week" id="phaseDetailWeek"></span>
+              <span class="phase-detail-title" id="phaseDetailTitle"></span>
+            </div>
+            <p id="phaseDetailDesc"></p>
+            <ul id="phaseDetailItems"></ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Learning Objectives -->
+      <div class="objectives-container">
+        <h3 class="diagram-title">Scaffolded Learning Objectives</h3>
+        <div class="objectives-list">
+          <div class="objective">
+            <div class="obj-level">Level 1</div>
+            <div class="obj-text"><strong>Recall</strong> — Identify the 5 key indicators of a phishing email header within 60 seconds</div>
+            <div class="obj-bloom bloom-1">Bloom's: Remember</div>
+          </div>
+          <div class="objective">
+            <div class="obj-level">Level 2</div>
+            <div class="obj-text"><strong>Apply</strong> — Classify simulated emails as phishing or legitimate using the Header Checklist under time pressure</div>
+            <div class="obj-bloom bloom-2">Bloom's: Apply</div>
+          </div>
+          <div class="objective">
+            <div class="obj-level">Level 3</div>
+            <div class="obj-text"><strong>Analyse</strong> — Decompose suspicious emails to identify spoofed metadata patterns across 3 different attack types</div>
+            <div class="obj-bloom bloom-3">Bloom's: Analyse</div>
+          </div>
+          <div class="objective">
+            <div class="obj-level">Level 4</div>
+            <div class="obj-text"><strong>Habit</strong> — Proactively report suspicious emails to the security team without prompt, demonstrating internalised behaviour</div>
+            <div class="obj-bloom bloom-4">Bloom's: Evaluate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: THE BUILD -->
+  <section class="section" id="build">
+    <div class="section-label">
+      <span class="section-num">03</span>
+      <span class="section-tag">EdTech Implementation & Innovation</span>
+    </div>
+    <div class="section-content">
+      <h2 class="section-title">The <em>Build</em></h2>
+      <p class="section-intro">Three interlocking components. Each designed to address a specific gap in the root cause analysis.</p>
+
+      <div class="build-features">
+        <div class="build-feature">
+          <div class="build-feature-icon">🏆</div>
+          <div class="build-feature-body">
+            <h3>Interactive Gamification</h3>
+            <p>A 30-day tournament where departments earn points for reporting mock-phishing emails. Real-time leaderboards and "Elite Defender" badges drive social motivation and team competition.</p>
+            <div class="build-tags">
+              <span>30-Day Tournament</span><span>Leaderboard</span><span>Badges</span><span>Social Motivation</span>
+            </div>
+          </div>
+        </div>
+        <div class="build-feature">
+          <div class="build-feature-icon">🥽</div>
+          <div class="build-feature-body">
+            <h3>AR-Based Just-in-Time Learning</h3>
+            <p>Utilising a patented AR approach, employees scan physical markers around the office to identify hidden security risks — unlocked screens, exposed documents, unattended devices.</p>
+            <div class="build-tags">
+              <span>Marker-Based AR</span><span>Just-in-Time</span><span>Physical Environment</span><span>AR Patent</span>
+            </div>
+          </div>
+        </div>
+        <div class="build-feature">
+          <div class="build-feature-icon">📱</div>
+          <div class="build-feature-body">
+            <h3>Micro-Learning Mini-Game</h3>
+            <p>"The Header Detective" — a daily 2-minute mobile challenge to identify spoofed metadata. Fits learning into the natural flow of work, embedding practice without disrupting productivity.</p>
+            <div class="build-tags">
+              <span>2-Minute Daily</span><span>Mobile-First</span><span>Micro-Learning</span><span>Spaced Practice</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Detective Game -->
+      <div class="game-container">
+        <h3 class="diagram-title">Play: The Header Detective</h3>
+        <p class="diagram-sub">Identify the suspicious elements in this email header. Tap or click what looks wrong.</p>
+        <div class="game-wrapper" id="game">
+          <div class="game-email" id="gameEmail">
+            <!-- Injected by JS -->
+          </div>
+          <div class="game-feedback" id="gameFeedback"></div>
+          <div class="game-score-bar">
+            <span>Round <span id="gameRound">1</span> of 3</span>
+            <span>Score: <span id="gameScore">0</span></span>
+          </div>
+          <button class="game-next-btn" id="gameNextBtn" style="display:none">Next Round →</button>
+        </div>
+        <div class="game-complete" id="gameComplete" style="display:none">
+          <div class="game-complete-inner">
+            <div class="game-complete-icon">🎖️</div>
+            <h4>Round Complete!</h4>
+            <p id="gameFinalMsg"></p>
+            <button class="btn-restart" id="gameRestart">Play Again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: ROI -->
+  <section class="section section-alt" id="roi">
+    <div class="section-label">
+      <span class="section-num">04</span>
+      <span class="section-tag">Evaluation — Kirkpatrick Level 4</span>
+    </div>
+    <div class="section-content">
+      <h2 class="section-title">The <em>ROI</em></h2>
+      <p class="section-intro">Measuring what matters. Not completion rates — behaviour change and business impact.</p>
+
+      <!-- Kirkpatrick Levels -->
+      <div class="kirkpatrick-grid">
+        <div class="kp-card">
+          <div class="kp-level">Level 1</div>
+          <div class="kp-label">Reaction</div>
+          <div class="kp-value">92%</div>
+          <div class="kp-desc">of employees preferred this over traditional video training</div>
+        </div>
+        <div class="kp-card">
+          <div class="kp-level">Level 2</div>
+          <div class="kp-label">Learning</div>
+          <div class="kp-value">87%</div>
+          <div class="kp-desc">passed the Header Detective post-assessment within 30 days</div>
+        </div>
+        <div class="kp-card">
+          <div class="kp-level">Level 3</div>
+          <div class="kp-label">Behaviour</div>
+          <div class="kp-value">+300%</div>
+          <div class="kp-desc">increase in proactive security reporting within first 60 days</div>
+        </div>
+        <div class="kp-card highlight">
+          <div class="kp-level">Level 4</div>
+          <div class="kp-label">Results</div>
+          <div class="kp-value">$1.2M</div>
+          <div class="kp-desc">estimated annual risk mitigation value from reduced incidents</div>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h4 class="chart-title">Phishing Click Rate Over 60 Days</h4>
+          <p class="chart-sub">Simulated campaign — % of employees clicking phishing links</p>
+          <canvas id="clickRateChart"></canvas>
+        </div>
+        <div class="chart-card">
+          <h4 class="chart-title">Proactive Security Reports</h4>
+          <p class="chart-sub">Weekly reports submitted to security team (before vs. after)</p>
+          <canvas id="reportingChart"></canvas>
+        </div>
+        <div class="chart-card chart-wide">
+          <h4 class="chart-title">Engagement vs. Completion — Old vs. New</h4>
+          <p class="chart-sub">Comparing old compliance video metrics with Human Firewall Championship</p>
+          <canvas id="comparisonChart"></canvas>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-author">
+        <strong>Rahmat Syawaludin</strong>
+        <span>Instructional Designer · Learning Experience Designer</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://rahmatsyawaludin.github.io/portfolio/">Full Portfolio</a>
+        <a href="mailto:rahmatsywldn@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/rahmat-syawaludin">LinkedIn</a>
+      </div>
+      <div class="footer-note">
+        <span class="disclaimer-badge small">Hypothetical Project — Based on L&D Principles Learned</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
