@@ -1,5 +1,5 @@
 /* =========================================
-   HUMAN FIREWALL CHAMPIONSHIP — script.js
+   HUMAN FIREWALL CHAMPIONSHIP, script.js
    ========================================= */
 
 // ── FISHBONE DIAGRAM ──────────────────────────────────────────
@@ -32,7 +32,7 @@ const phaseData = {
   2: {
     week: 'Week 2',
     title: 'Practice',
-    desc: 'Daily micro-challenges build the habit of scrutinising email headers. AR markers go live in the office. The first leaderboard snapshot is published — generating social competition.',
+    desc: 'Daily micro-challenges build the habit of scrutinising email headers. AR markers go live in the office. The first leaderboard snapshot is published, generating social competition.',
     items: ['Daily 2-Min Challenges', 'AR Office Scan Activated', 'First Leaderboard Drop', 'Peer Learning Pairs']
   },
   3: {
@@ -77,9 +77,9 @@ setPhase(1);
 const gameRounds = [
   {
     headers: [
-      { field: 'From', value: 'security-alerts@g00gle-support.net', isSuspect: true, explanation: '⚠️ Lookalike domain: "g00gle-support.net" uses zeros instead of "o" — a classic typosquatting attack.' },
+      { field: 'From', value: 'security-alerts@g00gle-support.net', isSuspect: true, explanation: '⚠️ Lookalike domain: "g00gle-support.net" uses zeros instead of "o", a classic typosquatting attack.' },
       { field: 'Reply-To', value: 'noreply@accounts.google.com', isSuspect: false },
-      { field: 'Subject', value: 'URGENT: Your account will be suspended in 24 hours', isSuspect: true, explanation: '⚠️ Urgency tactics ("URGENT", "24 hours") are a hallmark of social engineering — designed to bypass rational thinking.' },
+      { field: 'Subject', value: 'URGENT: Your account will be suspended in 24 hours', isSuspect: true, explanation: '⚠️ Urgency tactics ("URGENT", "24 hours") are a hallmark of social engineering, designed to bypass rational thinking.' },
       { field: 'Date', value: 'Thu, 17 Apr 2025 03:14:22 +0000', isSuspect: false },
       { field: 'Return-Path', value: '<bounce@phishing-relay77.ru>', isSuspect: true, explanation: '⚠️ Suspicious Return-Path domain: ".ru" TLD combined with "phishing-relay" in the domain name is a clear red flag.' },
     ],
@@ -89,9 +89,9 @@ const gameRounds = [
   {
     headers: [
       { field: 'From', value: 'hr-department@yourcompany-benefits.info', isSuspect: true, explanation: '⚠️ External domain impersonating internal HR. Your company HR would use an @yourcompany.com address, not a separate domain.' },
-      { field: 'Subject', value: 'Q2 Payroll Update — Action Required', isSuspect: false },
+      { field: 'Subject', value: 'Q2 Payroll Update: Action Required', isSuspect: false },
       { field: 'Date', value: 'Mon, 21 Apr 2025 08:02:11 +0000', isSuspect: false },
-      { field: 'X-Mailer', value: 'Mass Mailer Pro 9.1', isSuspect: true, explanation: '⚠️ "Mass Mailer Pro" in the X-Mailer header indicates bulk email software — not standard corporate email infrastructure.' },
+      { field: 'X-Mailer', value: 'Mass Mailer Pro 9.1', isSuspect: true, explanation: '⚠️ "Mass Mailer Pro" in the X-Mailer header indicates bulk email software, not standard corporate email infrastructure.' },
       { field: 'Reply-To', value: 'collect-data@form-submit.xyz', isSuspect: true, explanation: '⚠️ Reply-To domain (.xyz) differs from the sender domain. Replies will go to an attacker-controlled address, not internal HR.' },
     ],
     body: 'Hi Team, As part of our Q2 payroll review, please update your banking details by end of day. Use the secure form below to submit your new account information.',
@@ -102,7 +102,7 @@ const gameRounds = [
       { field: 'From', value: 'admin@microsoft.com', isSuspect: false },
       { field: 'Subject', value: 'Your Microsoft 365 subscription receipt', isSuspect: false },
       { field: 'Date', value: 'Fri, 18 Apr 2025 11:33:09 +0000', isSuspect: false },
-      { field: 'Received', value: 'from mail-spoof-inject.net (203.0.113.44)', isSuspect: true, explanation: '⚠️ The "Received" header shows the actual sending server: "mail-spoof-inject.net". The From address can be spoofed — trace the origin!' },
+      { field: 'Received', value: 'from mail-spoof-inject.net (203.0.113.44)', isSuspect: true, explanation: '⚠️ The "Received" header shows the actual sending server: "mail-spoof-inject.net". The From address can be spoofed, trace the origin!' },
       { field: 'DKIM-Signature', value: 'd=microsoftt.com; s=selector1; FAIL', isSuspect: true, explanation: '⚠️ DKIM signature failure AND the domain "microsoftt.com" (double-t) is a lookalike. Legitimate Microsoft emails pass DKIM from microsoft.com.' },
     ],
     body: 'Thank you for your Microsoft 365 renewal. Your subscription has been processed for $299.99. If you did not authorise this charge, call our support line immediately at +1-800-FAKE-NUM.',
@@ -195,8 +195,8 @@ function submitRound() {
     } else {
       if (selectedFields.has(idx)) {
         falsePosCount++;
-        el.style.background = 'rgba(224,92,92,0.08)';
-        el.style.borderColor = 'rgba(224,92,92,0.2)';
+        el.style.background = 'rgba(214,69,96,0.08)';
+        el.style.borderColor = 'rgba(214,69,96,0.25)';
       }
     }
   });
@@ -206,7 +206,7 @@ function submitRound() {
   gameScoreEl.textContent = currentScore;
 
   let feedbackHtml = `<div style="margin:12px 0;padding:16px;background:var(--surface);border-radius:8px;border:1px solid var(--border)">`;
-  feedbackHtml += `<div style="font-weight:600;color:var(--text);margin-bottom:8px">Found ${correctHits}/${round.suspectCount} suspicious fields — +${roundPoints} pts</div>`;
+  feedbackHtml += `<div style="font-weight:600;color:var(--text);margin-bottom:8px">Found ${correctHits}/${round.suspectCount} suspicious fields, +${roundPoints} pts</div>`;
   explanations.forEach(e => {
     feedbackHtml += `<div style="font-size:13px;color:var(--text-muted);margin-bottom:6px;line-height:1.5">${e}</div>`;
   });
@@ -226,9 +226,9 @@ function showGameComplete() {
   const maxScore = gameRounds.length * 30;
   const pct = Math.round((currentScore / maxScore) * 100);
   let msg = '';
-  if (pct >= 80) msg = `Outstanding! You scored ${currentScore}/${maxScore} — you're Elite Defender material. 🎖️`;
+  if (pct >= 80) msg = `Outstanding! You scored ${currentScore}/${maxScore}, you're Elite Defender material. 🎖️`;
   else if (pct >= 50) msg = `Good work! You scored ${currentScore}/${maxScore}. Keep practising the Header Detective daily.`;
-  else msg = `You scored ${currentScore}/${maxScore}. Review the missed headers and try again — habit takes repetition!`;
+  else msg = `You scored ${currentScore}/${maxScore}. Review the missed headers and try again. Habit takes repetition!`;
   gameFinalMsg.textContent = msg;
   gameComplete.style.display = 'block';
 }
@@ -255,9 +255,9 @@ renderRound(0);
 
 // ── CHARTS ────────────────────────────────────────────────────
 const chartDefaults = {
-  color: '#9a97a0',
+  color: '#6b6d8e',
   font: {
-    family: "'DM Sans', sans-serif",
+    family: "'Plus Jakarta Sans', sans-serif",
     size: 12
   }
 };
@@ -274,11 +274,11 @@ new Chart(clickRateCtx, {
       {
         label: 'Phishing Click Rate (%)',
         data: [25, 22, 17, 12, 8, 6, 4],
-        borderColor: '#c8a96e',
-        backgroundColor: 'rgba(200,169,110,0.08)',
+        borderColor: '#2F3185',
+        backgroundColor: 'rgba(47,49,133,0.08)',
         tension: 0.4,
         fill: true,
-        pointBackgroundColor: '#c8a96e',
+        pointBackgroundColor: '#2F3185',
         pointRadius: 5,
         borderWidth: 2
       }
@@ -289,8 +289,8 @@ new Chart(clickRateCtx, {
     plugins: {
       legend: { display: false },
       tooltip: {
-        backgroundColor: '#202535',
-        borderColor: 'rgba(200,169,110,0.3)',
+        backgroundColor: '#1a1b3a',
+        borderColor: 'rgba(47,49,133,0.25)',
         borderWidth: 1,
         callbacks: {
           label: ctx => ` ${ctx.raw}% click rate`
@@ -299,12 +299,12 @@ new Chart(clickRateCtx, {
     },
     scales: {
       x: {
-        grid: { color: 'rgba(255,255,255,0.04)' },
-        ticks: { color: '#6b6876' }
+        grid: { color: 'rgba(47,49,133,0.08)' },
+        ticks: { color: '#9b9dbf' }
       },
       y: {
-        grid: { color: 'rgba(255,255,255,0.04)' },
-        ticks: { color: '#6b6876', callback: v => v + '%' },
+        grid: { color: 'rgba(47,49,133,0.08)' },
+        ticks: { color: '#9b9dbf', callback: v => v + '%' },
         min: 0,
         max: 30
       }
@@ -324,9 +324,9 @@ new Chart(reportingCtx, {
         data: [4, 8, 18, 31, 36, 29],
         backgroundColor: ctx => {
           const val = ctx.raw;
-          if (val <= 4) return 'rgba(224,92,92,0.5)';
-          if (val >= 30) return 'rgba(76,175,130,0.6)';
-          return 'rgba(200,169,110,0.5)';
+          if (val <= 4) return 'rgba(214,69,96,0.55)';
+          if (val >= 30) return '#1CBDB3';
+          return 'rgba(47,49,133,0.55)';
         },
         borderRadius: 6,
         borderSkipped: false
@@ -338,8 +338,8 @@ new Chart(reportingCtx, {
     plugins: {
       legend: { display: false },
       tooltip: {
-        backgroundColor: '#202535',
-        borderColor: 'rgba(200,169,110,0.3)',
+        backgroundColor: '#1a1b3a',
+        borderColor: 'rgba(47,49,133,0.25)',
         borderWidth: 1,
         callbacks: {
           label: ctx => ` ${ctx.raw} reports submitted`
@@ -347,8 +347,8 @@ new Chart(reportingCtx, {
       }
     },
     scales: {
-      x: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#6b6876' } },
-      y: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#6b6876' }, min: 0 }
+      x: { grid: { color: 'rgba(47,49,133,0.08)' }, ticks: { color: '#9b9dbf' } },
+      y: { grid: { color: 'rgba(47,49,133,0.08)' }, ticks: { color: '#9b9dbf' }, min: 0 }
     }
   }
 });
@@ -363,14 +363,14 @@ new Chart(comparisonCtx, {
       {
         label: 'Old: Compliance Videos',
         data: [100, 34, 8, 22],
-        backgroundColor: 'rgba(107,104,118,0.45)',
+        backgroundColor: 'rgba(155,157,191,0.45)',
         borderRadius: 4,
         borderSkipped: false
       },
       {
         label: 'New: Human Firewall Championship',
         data: [96, 92, 300, 87],
-        backgroundColor: 'rgba(200,169,110,0.6)',
+        backgroundColor: '#1CBDB3',
         borderRadius: 4,
         borderSkipped: false
       }
@@ -382,14 +382,14 @@ new Chart(comparisonCtx, {
       legend: {
         position: 'top',
         labels: {
-          color: '#9a97a0',
+          color: '#6b6d8e',
           boxWidth: 12,
           padding: 16
         }
       },
       tooltip: {
-        backgroundColor: '#202535',
-        borderColor: 'rgba(200,169,110,0.3)',
+        backgroundColor: '#1a1b3a',
+        borderColor: 'rgba(47,49,133,0.25)',
         borderWidth: 1,
         callbacks: {
           label: ctx => ` ${ctx.dataset.label}: ${ctx.raw}%`
@@ -397,10 +397,10 @@ new Chart(comparisonCtx, {
       }
     },
     scales: {
-      x: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#6b6876' } },
+      x: { grid: { color: 'rgba(47,49,133,0.08)' }, ticks: { color: '#9b9dbf' } },
       y: {
-        grid: { color: 'rgba(255,255,255,0.04)' },
-        ticks: { color: '#6b6876', callback: v => v + '%' },
+        grid: { color: 'rgba(47,49,133,0.08)' },
+        ticks: { color: '#9b9dbf', callback: v => v + '%' },
         min: 0
       }
     }
